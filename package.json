@@ -1,0 +1,18 @@
+{
+  "name": "koa-gq-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Clementine1995/koa-gq-template.git",
+  "author": "huyichen <huyichen@camelotchina.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.5.12"
+  }
+}
