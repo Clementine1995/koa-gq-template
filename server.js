@@ -2,7 +2,7 @@
 const Koa = require('koa');
 const KoaStatic = require('koa-static')
 const Router = require('koa-router')
-const bodyParser = require('koa-bodyparser')
+const koaBody = require('koa-body')
 
 const database = require('./src/db') // 引入mongodb
 const infoCon = require('./src/db/controller/info') // 引入info controller
@@ -14,8 +14,11 @@ const app = new Koa()
 const router = new Router();
 
 // 使用 bodyParser 和 KoaStatic 中间件
-app.use(bodyParser());
+app.use(koaBody());
+
 app.use(KoaStatic(__dirname + '/public'));
+
+
 
 // 路由设置test
 router.get('/test', (ctx, next) => {
@@ -23,7 +26,7 @@ router.get('/test', (ctx, next) => {
 });
 
 // 设置每一个路由对应的相对的控制器
-router.post('/saveinfo', infoCon.saveInfo)
+router.post('/saveinfo',infoCon.saveInfo)
 router.get('/info', infoCon.fetchInfo)
 
 router.post('/savestudent', studentCon.saveStudent)

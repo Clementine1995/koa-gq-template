@@ -3,11 +3,11 @@ const Info = mongoose.model('Info')
 
 // 保存info信息
 const saveInfo = async (ctx, next) => {
-  console.log(ctx)
   // 获取请求的数据
   const opts = ctx.request.body
   const info = new Info(opts)
   const saveInfo = await info.save() // 保存数据
+
   // 简单判断一下 是否保存成功，然后返回给前端
   if (saveInfo) {
     ctx.body = {

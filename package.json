@@ -6,11 +6,11 @@
   "author": "huyichen <huyichen@camelotchina.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "koa": "^2.7.0",
-    "koa-bodyparser": "^4.2.1",
+    "koa-body": "^4.1.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "mongoose": "^5.5.12"
